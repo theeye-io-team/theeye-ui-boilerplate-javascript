@@ -1,0 +1,63 @@
+
+[data-component=prompt] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100,100,100,0.5);
+  z-index: 200;
+
+  .top, .middle, .bottom {
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    font-family: monospace;
+  }
+
+  .message-box {
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid #888;
+    box-shadow: 3px 3px #888;
+    background: #fff;
+  }
+
+  .input-container {
+    display: block;
+    margin-top: 20px;
+
+    input {
+      background: none;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #ececec;
+      font-size: 16px;
+    }
+
+    input:focus {
+      background: none;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #130e40;
+    }
+  }
+
+  button, .button {
+    background: #130e40;
+    border-radius: 18px;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 5px;
+    display: inline-block;
+  }
+
+  .error-message {
+    display: none;
+    margin-top: 10px;
+    color: red;
+    text-align: left;
+  }
+}

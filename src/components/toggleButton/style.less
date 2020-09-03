@@ -1,0 +1,40 @@
+.toggle-blocks-button {
+  padding-right: 10px;
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    float: right;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    display: none;
+  }
+
+  /* The slider */
+  input + .slider {
+    display:inline-block;
+    padding: 0 36px 0 0;
+    background:url("../../assets/images/icons/check-normal.png") no-repeat center right;
+    height: 29px;
+    cursor:pointer;
+    line-height:29px
+  }
+
+  input:checked + .slider {
+    background:url("../../assets/images/icons/check-checked.png") no-repeat center right;
+    height: 29px;
+    display:inline-block;
+  }
+
+  .button-label {
+    display: -webkit-inline-box;
+    float: left;
+    line-height: 30px;
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,7 @@
+dist/*.js
+node_modules
+dist/*.map
+*.swp
+npm-debug.log
+dist/index.html
+_dist
