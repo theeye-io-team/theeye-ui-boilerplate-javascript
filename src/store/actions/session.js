@@ -20,7 +20,6 @@ export default {
       type: 'SET_PROFILE',
       profile: {
         customer_id: (data.customer && data.customer.id),
-        active_document_id: data.active_document_id,
         name: data.name
       }
     }

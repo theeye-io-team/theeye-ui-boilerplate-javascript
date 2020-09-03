@@ -1,4 +1,5 @@
 import View from '../view'
+import Dummy from '../dummy'
 import Profile from '../profile'
 import Login from '../login'
 import './styles.less'
@@ -21,18 +22,44 @@ class Root extends View {
         <footer></footer>
       </div>
       `
+
+    this.updateState = this.updateState.bind(this)
+    this.updateState()
+    window.app.store.subscribe(this.updateState)
+  }
+
+  getSessionState () {
+    //sample
+    return window.app.store.getState().session
+  }
+
+  updateState() {
+    let session = this.getSessionState()
+    if (session.profile) {
+      this.dummy.render()
+      this.el
+        .querySelector('[data-hook=container]')
+        .appendChild(this.dummy.el)
+    } else {
+      if (this.dummy) {
+        this.dummy.destroy()
+      }
+    }
   }
 
   render () {
     super.render()
 
-    this.login = new Login({
+    new Login({
       target: this.el.querySelector('[data-hook=container]')
     })
 
-    this.profile = new Profile({
+    new Profile({
       target: this.el.querySelector('[data-hook=profile]')
     })
+
+    // will be appended into section[data-hook=container]
+    this.dummy = new Dummy({ })
   }
 }
 
