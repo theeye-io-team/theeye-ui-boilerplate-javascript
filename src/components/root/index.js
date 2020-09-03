@@ -2,6 +2,7 @@ import View from '../view'
 import Profile from '../profile'
 import Login from '../login'
 import './styles.less'
+import logo from 'assets/images/logo.png'
 
 class Root extends View {
   constructor () {
@@ -11,7 +12,7 @@ class Root extends View {
       <div data-component="root">
         <header>
           <div class="brand">
-            <img src="images/logo.png" alt="The Eye">
+            <img src="${logo}" alt="The Eye">
             <span>TheEye-IO Boilerplate</span>
           </div>
           <div class="profile" data-hook="profile"></div>
