@@ -35,7 +35,7 @@ class Root extends View {
 
   updateState() {
     let session = this.getSessionState()
-    if (session.profile) {
+    if (session && session.profile) {
       this.dummy.render()
       this.el
         .querySelector('[data-hook=container]')
