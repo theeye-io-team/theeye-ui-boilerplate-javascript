@@ -1,4 +1,4 @@
-# ui-boilerplate
+# TheEye-io Reactive SPA Web boilerplate
 
 theeye boilerplate structure
 
