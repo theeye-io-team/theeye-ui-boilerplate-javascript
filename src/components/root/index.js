@@ -1,5 +1,4 @@
 import View from '../view'
-import DocumentTagger from '../document'
 import Profile from '../profile'
 import Login from '../login'
 import './styles.less'
@@ -13,7 +12,7 @@ class Root extends View {
         <header>
           <div class="brand">
             <img src="images/logo.png" alt="The Eye">
-            <span>Facturas</span>
+            <span>TheEye-IO Boilerplate</span>
           </div>
           <div class="profile" data-hook="profile"></div>
         </header>
@@ -32,10 +31,6 @@ class Root extends View {
 
     this.profile = new Profile({
       target: this.el.querySelector('[data-hook=profile]')
-    })
-
-    this.tagger = new DocumentTagger({
-      target: this.el.querySelector('[data-hook=container]')
     })
   }
 }

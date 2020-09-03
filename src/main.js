@@ -1,3 +1,6 @@
+// fix regeneration-runtime error
+import 'regenerator-runtime/runtime'
+
 import Root from './components/root'
 import Loader from './components/loader'
 import Modal from './components/modal'

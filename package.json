@@ -1,8 +1,9 @@
 {
-  "name": "TheEye Boilerplate",
+  "name": "TheEye-Boilerplate",
   "version": "0.0.0",
   "description": "",
   "main": "",
+  "browserslist": ">0.25%, not dead",
   "scripts": {
     "build-dev": "NODE_ENV=development npx webpack --watch --config webpack.config.js",
     "build-prod": "NODE_ENV=production npx webpack --config webpack.config.js",
@@ -11,10 +12,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "~7.11.6",
+    "@babel/preset-env": "~7.11.5",
     "autoprefixer": "~9.7.0",
-    "@babel/core": "~7.2.2",
-    "babel-loader": "~8.0.6",
-    "@babel/preset-env": "~7.2.3",
+    "babel-loader": "~8.1.0",
     "bootstrap": "~4.3.1",
     "choices.js": "~4.1.4",
     "clean-webpack-plugin": "~1.0.1",
@@ -36,7 +37,7 @@
     "uglifyjs-webpack-plugin": "~2.2.0",
     "url-loader": "^2.3.0",
     "webpack": "^4.42.0",
-    "webpack-cli": "~3.3.11",
+    "webpack-cli": "~3.3.12",
     "webpack-dev-server": "~3.11.0"
   }
 }

@@ -16,6 +16,12 @@ const config = {
     compress: true,
     port: 9000
   },
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'src'),
+      'node_modules'
+    ],
+  },
   plugins: [
     new webpack.ProvidePlugin({
       '$': 'jquery',
@@ -30,12 +36,6 @@ const config = {
       template: path.join(__dirname, '/src/template.html')
     })
   ],
-  resolve: {
-    modules: [
-      path.resolve(__dirname, 'src'),
-      'node_modules'
-    ],
-  },
 	module: {
 		rules: [
       {

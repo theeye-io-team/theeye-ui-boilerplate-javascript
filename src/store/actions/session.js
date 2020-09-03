@@ -6,14 +6,12 @@ export default {
     return { type: 'DESTROY_SESSION' }
   },
   set (data) {
-    let { ttl, created, userId } = data
+    //let { ttl, created, userId } = data
+    let { access_token } = data
     return {
       type: 'SET_SESSION',
       session: {
-        token: data.id,
-        ttl,
-        created,
-        userId
+        token: access_token
       }
     }
   },

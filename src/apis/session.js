@@ -5,14 +5,15 @@ import config from 'config'
 const gateway = config.api.gateway
 
 export default {
-  login (email, password) {
+  login (username, password) {
     window.app.loader.show('LOADING...')
     const url = `${gateway}/auth/login`
     http  
       .post(url)
-      .send({ email, password }) // query string
-      .set('Accept', 'application/json')
-      .set('Content-Type', 'application/json')
+      //.send({ username, password }) // query string
+      .set('accept', 'application/json')
+      .set('content-type', 'application/json')
+      .auth(username, password)
       .end((err, response) => {
         if (err) {
           if (err.status === 401) {
@@ -20,9 +21,9 @@ export default {
             return
           }
         }
-          let session = response.body
-          window.app.store.dispatch(app.actions.session.set(session))
-          window.app.load()
+        let session = response.body
+        window.app.store.dispatch(app.actions.session.set(session))
+        window.app.load()
       })
   },
   getProfile (access_token = null, next) {
