@@ -1,4 +1,4 @@
-# TheEye-io Reactive SPA Web boilerplate
+# TheEye-io - Vanilla Js (+steroids) Reactive SPA boilerplate
 
 theeye boilerplate structure
 
