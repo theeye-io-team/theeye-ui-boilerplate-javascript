@@ -27,12 +27,56 @@ Core Tools (check package.json)
 
 ## Conventions
 
-### [data-hook=] attribute
+### Use ES6
 
-We use <tag-name>[data-hook=data-hook-name] anytime we need to bind events to DOM elements. we never use class, id or any other selector. 
-we also never forget to add the data-hooks to identify handled events in our Views.
-
-
-Why? Designers usually replace, add and remove selectors and attributes. It is very common change them to map the templates with the CSS.
+This project comes with Babel, Webpack and ES6 ready. So, use it wisely.
 
 
+### [data-hook] attribute
+
+We use <tag-name>[data-hook=data-hook-name] anytime we need to bind events to DOM elements. We should never use class, id or any other common selector we can't control.
+We should also never forget to add the attribute *data-hook* to identify the handled element events in our Views.
+
+Usually selectors and HTML are replaced, add and remove selectors and attributesHTML/CSS designers, builders and sometimes we by mistake, . It is very common to change the HTML tree and element attributes to map the design and the HTML templates with the CSS.
+
+
+### Links
+
+We can bind events to any element in the DOM. But when we need user interaction vía click, it is better to use elements like `<a>` or `<button>`. This is a good practice and then enable us to do better tests and Bot automations.
+
+
+### View components
+
+When creating new components, use a root element. The root element will be used to contain every element that belongs to that component. Multiple root elements can't be used.
+
+The root element must have the attribute [data-component]. The main purpose for this attribute is to attach the component styles.
+As an example
+
+components/crazy/index.js
+
+```javascript
+
+// load this component styles
+import './styles.less'
+
+class CrazyComponent extends View {
+  constructor () {
+    super()
+    
+    this.template = `<div data-component="crazy-component">Crazy View Template</div> `
+  }
+}
+
+```
+
+components/crazy/styles.less
+
+```css
+[data-component=crazy-component] {
+  div {
+    color: red;
+    width: 100%;
+    position: absolute;
+  }
+}
+```
