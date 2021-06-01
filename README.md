@@ -37,12 +37,12 @@ This project comes with Babel, Webpack and ES6 ready. So, use it wisely.
 We use <tag-name>[data-hook=data-hook-name] anytime we need to bind events to DOM elements. We should never use class, id or any other common selector we can't control.
 We should also never forget to add the attribute *data-hook* to identify the handled element events in our Views.
 
-Usually selectors and HTML are replaced, add and remove selectors and attributesHTML/CSS designers, builders and sometimes we by mistake, . It is very common to change the HTML tree and element attributes to map the design and the HTML templates with the CSS.
+HTML and CSS structures are constantly being changed and updated. It is very common to loose event bindings if they are not correctly identified.
 
 
 ### Links
 
-We can bind events to any element in the DOM. But when we need user interaction vía click, it is better to use elements like `<a>` or `<button>`. This is a good practice and then enable us to do better tests and Bot automations.
+We can bind events to any element in the DOM. But when we are bindings user interaction (eg. vía click), it is better to use elements like `<a>` or `<button>`. This is a good practice and then enable us to do better tests and bots automations.
 
 
 ### View components
