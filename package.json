@@ -22,7 +22,6 @@
     "css-loader": "~2.1.1",
     "html-webpack-plugin": "~3.2.0",
     "jquery": "~3.5.1",
-    "json-facturas": "github:theeye-io/facturas",
     "less": "~3.9.0",
     "less-loader": "~4.1.0",
     "node-sass": "~4.14.1",
